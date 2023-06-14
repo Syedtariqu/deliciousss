@@ -55,6 +55,9 @@ const DetailsWrapper = styled.div`
   margin-top: 5rem;
   margin-bottom: 5rem;
   display: flex;
+  @media (max-width: 400px) {
+    flex-direction: column;
+}
   .active {
     background: linear-gradient(35deg, #494949, #313131);
     color: white;
@@ -62,15 +65,28 @@ const DetailsWrapper = styled.div`
   div{
     display: flex;
     flex-direction: column;
-    ${'' /* justify-content: center; */}
 align-items: center;
+@media (max-width: 400px) {
+   margin-top : 20px
+     
+}
   }
   img{
     margin-right: 1rem;
-    ${'' /* width: 100% */}
+    @media (max-width: 400px) {
+      margin-right: 0rem;
+      height : 300px;
+      width:300px;
+     
+}
   }
   h2 {
     margin-bottom: 2rem;
+    @media (max-width: 400px) {
+      
+      width: 90%;
+     
+}
   }
   li {
     font-size: 1.2rem;

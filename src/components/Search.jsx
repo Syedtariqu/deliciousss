@@ -26,6 +26,9 @@ function Search() {
 }
 const FormStle = styled.form`
   margin: 1rem 10rem;
+  @media (max-width: 400px) {
+    margin: 1rem 1.5rem;
+}
   div {
     width: 100%;
     position: relative;
@@ -39,6 +42,12 @@ const FormStle = styled.form`
     border-radius: 1rem;
     outline: none;
     width: 100%;
+    @media (max-width: 400px) {
+font-size: 1rem;
+padding: 1rem 2.5rem;
+border-radius: 0.8rem;
+width: 100%;  
+}
   }
   svg {
     position: absolute;
@@ -46,6 +55,9 @@ const FormStle = styled.form`
     left: 0%;
     transform: translate(100%, -50%);
     color: white;
+    @media (max-width: 400px) {
+      font-size: 1rem;
+}
   }
 `;
 export default Search;

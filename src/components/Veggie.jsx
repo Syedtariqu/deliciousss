@@ -30,13 +30,20 @@ function Veggie() {
     <Splide
       options={{
         perPage: 3,
+        breakpoints: {
+        
+            767: {
+              perPage: 2,
+              gap: "0.8rem",
+            },
+          },
         arrows: false,
         pagination: false,
         drag: "free",
-        gap: "4rem",
+        gap: "2rem",
       }}
     >
-      {veggie.map((recipe,index) => {
+      {veggie.map((recipe) => {
         return (
           <>
             <SplideSlide key={recipe.id}>
@@ -62,6 +69,9 @@ const Card = styled.div`
   min-height: 20rem;
   border-radius: 2rem;
   overflow: hidden;
+  @media (max-width: 400px) {
+    min-height: 15rem;
+}
   img {
     border-radius: 2rem;
     position: absolute;
@@ -69,6 +79,7 @@ const Card = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+
   }
   p {
     position: absolute;
@@ -85,6 +96,10 @@ const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 400px) {
+      font-weight: 500;
+    font-size: 0.8rem;
+}
   }
 `;
 const Gradient = styled.div`

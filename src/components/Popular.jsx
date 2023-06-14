@@ -36,6 +36,13 @@ function Popular() {
       <Splide
         options={{
           perPage: 4,
+          breakpoints: {
+       
+            767: {
+              perPage: 2,
+              gap: "0.8rem",
+            },
+          },
           arrows: false,
           pagination: false,
           drag: "free",
@@ -68,6 +75,9 @@ const Card = styled.div`
   min-height: 18rem;
   border-radius: 2rem;
   overflow: hidden;
+  @media (max-width: 400px) {
+    min-height: 15rem;
+}
   img {
     border-radius: 2rem;
     position: absolute;
@@ -91,6 +101,10 @@ const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 400px) {
+      font-weight: 500;
+    font-size: 0.8rem;
+}
   }
 `;
 const Gradient = styled.div`
